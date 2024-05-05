@@ -32,11 +32,11 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  console.log("Candidate Name: " + candidateName);
+  console.log('\n',"Candidate Name: " + candidateName);
   for (let i = 0; i < 5; i++){
     console.log(i+1 + ") "+ questions[i]);
     console.log("Your answer: ",candidateAnswers[i]);
-    console.log("Correct answer: ",correctAnswers[i]);
+    console.log("Correct answer: ",correctAnswers[i],'\n');
   }
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
