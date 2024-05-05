@@ -31,26 +31,24 @@ function askQuestion() {
 
 function gradeQuiz(candidateAnswers) {
 
-  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  console.log('\n',"Candidate Name: " + candidateName);
-  for (let i = 0; i < 5; i++){
-    console.log(i+1 + ") "+ questions[i]);
-    console.log("Your answer: ",candidateAnswers[i]);
-    console.log("Correct answer: ",correctAnswers[i],'\n');
-  }
-
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
   let correctAnswerCount =0;
-  for (let i =0; i < 5; i++){
+  console.log(`\nCandidate Name: ${candidateName}`);
+  for (let i = 0; i < 5; i++){
     if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()) {
       correctAnswerCount = correctAnswerCount + 1;
     }
+   console.log(`${i+1}) ${questions[i]}
+   Your Answer : ${candidateAnswers[i]}
+   Correct Answer : ${correctAnswers[i]}\n`);
   }
 
-  grade = (correctAnswerCount/5)*100;
- console.log(">>> Overall Grade: "+grade+"% ("+correctAnswerCount+" of 5 responses correct) <<<");
+  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+
+ grade = (correctAnswerCount/5)*100;
+ console.log(`>>> Overall Grade: ${grade}% (${correctAnswerCount}) of 5 responses correct) <<<`);
 if (grade >= 80) {
-console.log(">>> Status: PASSED <<<");
+  console.log(">>> Status: PASSED <<<");
 } else {
   console.log(">>> Status: FAILED <<<");
 }
