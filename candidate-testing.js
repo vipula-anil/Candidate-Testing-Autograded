@@ -13,7 +13,7 @@ let candidateAnswer = "";
 //TODO: Variables for Part 2
 let questions = ["Who was the first American woman in space? ","True or false: 5 kilometer == 5000 meters? ","(5 + 3)/2 * 10 = ? ","Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ","What is the minimum crew size for the ISS? "];
 let correctAnswers = ["Sally Ride","true","40","Trajectory","3"];
-let candidateAnswers=[];
+let candidateAnswers = [];
 
 
 function askForName() {
@@ -43,7 +43,7 @@ function gradeQuiz(candidateAnswers) {
    Correct Answer : ${correctAnswers[i]}\n`);
   }
 
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+ let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
  grade = (correctAnswerCount/5)*100;
  console.log(`>>> Overall Grade: ${grade}% (${correctAnswerCount}) of 5 responses correct) <<<`);
